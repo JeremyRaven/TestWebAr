@@ -19,17 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const anchor = mindarThree.addAnchor(0);
     anchor.group.add(gltf.scene);
 
-    const mixer = new THREE.AnimationMixer(gltf.scene);
-    const action = mixer.clipAction(gltf.animations[0]);
-    action.play();
-
     const clock = new THREE.Clock();
 
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
       const delta = clock.getDelta();
       gltf.scene.rotation.set(0, gltf.scene.rotation.y+delta, 0);
-      mixer.update(delta);
       renderer.render(scene, camera);
     });
   }
