@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(light);
 
     const gltf = await loadGLTF('./assets/models/Pylon3M.glb');
-    gltf.scene.scale.set(0.1, 0.1, 0.1);
+    gltf.scene.scale.set(0.01, 0.01, 0.01);
     gltf.scene.position.set(0, -0.4, 0);
     gltf.scene.rotation.set(Math.PI/2, 0, 0)
 
