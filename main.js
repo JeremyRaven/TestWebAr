@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
       const delta = clock.getDelta();
-      gltf.scene.rotation.set(gltf.scene.rotation.z+delta, 0, 0);
+      //gltf.scene.rotation.set(gltf.scene.rotation.z+delta, 0, 0);
       renderer.render(scene, camera);
     });
   }
