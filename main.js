@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(light);
 
     const gltf = await loadGLTF('./assets/models/Pylon3M.glb');
-    gltf.scene.scale.set(0.05, 0.05, 0.05);
-    gltf.scene.position.set(0, -0.4, 0);
+    gltf.scene.scale.set(0.03, 0.03, 0.03);
+    gltf.scene.position.set(0, 2, 0);
     gltf.scene.rotation.set(Math.PI/2, 0, 0)
 
     const anchor = mindarThree.addAnchor(0);
