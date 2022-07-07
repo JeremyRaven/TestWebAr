@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(light);
 
     const gltf = await loadGLTF('./assets/models/Pylon3M.glb');
-    gltf.scene.scale.set(0.01, 0.01, 0.01);
+    gltf.scene.scale.set(0.05, 0.05, 0.05);
     gltf.scene.position.set(0, -0.4, 0);
     gltf.scene.rotation.set(Math.PI/2, 0, 0)
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
       const delta = clock.getDelta();
-      gltf.scene.rotation.set(0, gltf.scene.rotation.y+delta, 0);
+      gltf.scene.rotation.set(Math.PI/2, gltf.scene.rotation.y+delta, 0); //gltf.scene.rotation.y+delta
       renderer.render(scene, camera);
     });
   }
