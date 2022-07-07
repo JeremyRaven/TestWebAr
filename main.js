@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     await mindarThree.start();
     renderer.setAnimationLoop(() => {
       const delta = clock.getDelta();
-      gltf.scene.rotation.set(Math.PI/2, gltf.scene.rotation.y+delta, 0); //gltf.scene.rotation.y+delta
+      gltf.scene.rotation.y += delta //gltf.scene.rotation.y+delta
       renderer.render(scene, camera);
     });
   }
